@@ -1,0 +1,76 @@
+<div class="row justify-content-around pt-4">
+    <div class="col-md-4">
+        <form class="form-inline">
+
+            <div class="form-group">
+              <div class="input-group">
+                <input class="form-control" placeholder="Desde"
+                       name="d1" #c1="ngModel" [(ngModel)]="desde" ngbDatepicker #d1="ngbDatepicker">
+                <div class="input-group-append">
+                  <button class="btn btn-outline-secondary calendar" (click)="d1.toggle()" type="button"></button>
+                </div>
+              </div>
+            </div>
+          </form>
+
+    </div>
+    <div class="col-md-4">
+        <form class="form-inline">
+            <div class="form-group">
+              <div class="input-group">
+                <input class="form-control" placeholder="Hasta"
+                       name="d2" #c2="ngModel" [(ngModel)]="hasta" ngbDatepicker #d2="ngbDatepicker">
+                <div class="input-group-append">
+                  <button class="btn btn-outline-secondary calendar" (click)="d2.toggle()" type="button"></button>
+                </div>
+              </div>
+            </div>
+          </form>
+    </div>
+
+    <div class="col-md-4">
+      <button type="button" class="btn btn-primary" (click)="buscarFacturas()">Buscar</button>
+    </div>
+
+
+
+
+  </div>
+
+  <div class="row" *ngIf="errorFechas == true">
+    <div class="col-12 pt-4">
+        <div class="alert alert-warning alert-dismissible fade show" role="alert">
+            <strong>Error en las fechas!</strong> Debes seleccionar las 2 fechas para hacer la busqueda.
+            <button type="button" class="close" data-dismiss="alert" aria-label="Close" (click)=errorUpdate()>
+              <span aria-hidden="true">&times;</span>
+            </button>
+          </div>
+    </div>
+  </div>
+
+<!-- manejo de imagenes -->
+  <div class="row">
+    <div class="col-12 pt-4">
+        <div class="card-deck pt-4" *ngFor="let image of this.ImagenServicio.Imagenes">
+            <div class="card">
+              <img class="card-img-top" src="{{ image.url }}" alt="Card image cap">
+              <div class="card-body">
+              </div>
+              <div class="card-footer">
+                <small class="text-muted">{{ image.fechaCreacion }}</small>
+              </div>
+            </div>
+          </div>
+
+    </div>
+  </div>
+
+
+
+
+
+
+
+
+
+

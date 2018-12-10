@@ -1,0 +1,115 @@
+<div class="form-group col-md-4">
+  <input type="text" [(ngModel)]="searchText" placeholder="Buscar..." class="advancedSearchTextbox form-control">
+
+</div>
+<br>
+
+<table class="table">
+    <thead>
+      <tr>
+        <th scope="col">Nombre</th>
+        <th scope="col">Ciudad</th>
+        <th scope="col">Ver</th>
+      </tr>
+    </thead>
+    <tbody>
+        <tr *ngFor="let pendiente of this.clienteservicio.pendientes | filtro: {nombre: searchText, apellido: searchText, ciudad: searchText}; let i=index;">
+            <td>{{ pendiente.nombre }} {{ BuscarCliente.apellido }}</td>
+            <td>{{ pendiente.ciudad }}</td>
+            <td>
+              <!-- <a class="nav-link text-primary"  href="" data-target="#exampleModal" data-toggle="modal" (click)="BuscarCliente(pendiente)">Ver</a> -->
+              <button type="button" class="btn btn-primary" data-dismiss="modal" (click)= "BuscarCliente(pendiente); open(content)">Ver</button>
+            </td>
+          </tr>
+
+    </tbody>
+  </table>
+
+
+
+
+
+  <ng-template #content let-modal>
+    <div class="modal-header">
+      <h4 class="modal-title" id="modal-basic-title">Cliente</h4>
+      <button type="button" class="close" aria-label="Close" (click)="modal.dismiss('Cross click')">
+        <span aria-hidden="true">&times;</span>
+      </button>
+    </div>
+    <div class="modal-body">
+      <div class="container-fluid">
+          <div class="form-row">
+              <div class="form-group col-md-6">
+                    <label class="text-primary">Nombre</label>
+                    <input type="text" readonly class="form-control-plaintext " value="{{  this.clienteservicio.clienteSeleccionado.nombre }}">
+                    <input type="text" readonly class="form-control-plaintext" value="{{  this.clienteservicio.clienteSeleccionado.apellido }}">
+              </div>
+              <div class="form-group col-md-6">
+                  <label class="text-primary" >Telefono</label>
+                  <input type="text" readonly class="form-control-plaintext" value="{{ this.clienteservicio.clienteSeleccionado.telefono }}">
+              </div>
+           </div>
+
+            <hr>
+
+            <div class="form-row">
+                <div class="form-group col-md-4">
+                      <label class="text-primary">Ciudad</label>
+                      <input type="text" readonly class="form-control-plaintext" value= "{{ this.clienteservicio.clienteSeleccionado.ciudad }}">
+                </div>
+                <div class="form-group col-md-4">
+                    <label class="text-primary" >Direccion</label>
+                      <input type="text" readonly class="form-control-plaintext" value="{{ this.clienteservicio.clienteSeleccionado.direccion }}">
+                </div>
+                <div class="form-group col-md-4">
+                  <label class="text-primary" >Correo</label>
+                    <input type="text" readonly class="form-control-plaintext" value="{{ this.clienteservicio.clienteSeleccionado.correo }}">
+              </div>
+             </div>
+
+             <hr>
+
+             <div class="form-row">
+                 <div class="form-group col-md-4">
+                       <label class="text-primary">Electrodomestico</label>
+                       <input type="text" readonly class="form-control-plaintext" value= "{{ this.clienteservicio.clienteSeleccionado.electrodomestico }}">
+                 </div>
+                 <div class="form-group col-md-4">
+                     <label class="text-primary" >Fecha</label>
+                       <input type="text" readonly class="form-control-plaintext" value="{{ this.clienteservicio.clienteSeleccionado.fecha.year }}/{{ this.clienteservicio.clienteSeleccionado.fecha.month }}/{{ this.clienteservicio.clienteSeleccionado.fecha.day }}">
+                 </div>
+                 <div class="form-group col-md-4">
+                  <label class="text-primary" >Codigo Postal</label>
+                    <input type="text" readonly class="form-control-plaintext" value="{{ this.clienteservicio.clienteSeleccionado.codigoPostal }}">
+              </div>
+              </div>
+
+
+             <hr>
+
+             <div class="form-group">
+                <label class="text-primary" >Descripcion</label>
+                      <input type="text" readonly class="form-control-plaintext" value="{{ this.clienteservicio.clienteSeleccionado.descripcion }}">
+            </div>
+
+            <hr>
+
+            <div class="form-row">
+              <div class="form-group col-md-6">
+                    <label class="text-primary">Nombre Tecnico</label>
+                    <input type="text" readonly class="form-control-plaintext " value="{{ this.nombre }}">
+                    <input type="text" readonly class="form-control-plaintext" value="{{ this.apellido }}">
+              </div>
+              <div class="form-group col-md-6">
+                  <label class="text-primary" >Telefono Tecnico</label>
+                  <input type="text" readonly class="form-control-plaintext" value="{{ this.telefono }}">
+              </div>
+           </div>
+      </div>
+    </div>
+  <div class="modal-footer">
+    <button type="button" class="btn btn-primary" data-dismiss="modal"  (click)="modal.dismiss('Cross click')">Cerrar</button>
+  </div>
+
+  </ng-template>
+

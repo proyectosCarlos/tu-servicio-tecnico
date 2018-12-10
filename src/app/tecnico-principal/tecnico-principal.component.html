@@ -1,0 +1,59 @@
+<div class="container">
+  <div class="row no-gutters">
+    <div class="col-12 margen">
+      <abe-grafica-tecnico></abe-grafica-tecnico>
+    </div>
+   <div class=" row no-gutters margen">
+      <div class="col-md-12">
+
+          <div class="accordion" id="accordionExample">
+              <div class="card">
+                <div class="card-header bg-success" id="headingTwo">
+                  <h5 class="mb-0">
+                    <button (click)="obtenerClientes()" class="btn btn-link collapsed bg-success text-white" type="button" data-toggle="collapse" data-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
+                     Lista de Clientes
+                    </button>
+                  </h5>
+                </div>
+                <div id="collapseTwo" class="collapse" aria-labelledby="headingTwo" data-parent="#accordionExample">
+                  <div class="card-body">
+                    <abe-clientes-tecnico></abe-clientes-tecnico>
+                  </div>
+                </div>
+              </div>
+              <div class="card">
+                <div class="card-header bg-warning" id="headingThree">
+                  <h5 class="mb-0">
+                    <button (click)="obtenerPendientes()" class="btn btn-link collapsed bg-warning text-dark" type="button" data-toggle="collapse" data-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
+                      Clientes Pendientes
+                    </button>
+                  </h5>
+                </div>
+                <div id="collapseThree" class="collapse" aria-labelledby="headingThree" data-parent="#accordionExample">
+                  <div class="card-body">
+                    <abe-pendientes-tecnico></abe-pendientes-tecnico>
+                  </div>
+                </div>
+              </div>
+
+              <div class="card">
+                <div class="card-header bg-danger" id="headingFour">
+                  <h5 class="mb-0">
+                    <button (click)="obtenerGarantias()" class="btn btn-link collapsed bg-danger text-white" type="button" data-toggle="collapse" data-target="#collapseFour" aria-expanded="false" aria-controls="collapseFour">
+                     Garantias
+                    </button>
+                  </h5>
+                </div>
+                <div id="collapseFour" class="collapse" aria-labelledby="headingFour" data-parent="#accordionExample">
+                  <div class="card-body">
+                  <abe-garantias-tecnico></abe-garantias-tecnico>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+        </div>
+   </div>
+  </div>
+</div>
+

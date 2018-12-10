@@ -1,0 +1,106 @@
+<div *ngIf="this.confirmar== 'ok'" class="alert alert-success alert-dismissible fade show" role="alert">
+  <strong>Tecnico Guardado! </strong> Los datos fueron guardados con exito.
+  <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+    <span aria-hidden="true">&times;</span>
+  </button>
+</div>
+
+<div *ngIf="this.confirmar== 'error'" class="alert alert-danger alert-dismissible fade show" role="alert">
+  <strong>Tecnico Error! </strong> Los datos no fueron guardados.
+  <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+    <span aria-hidden="true">&times;</span>
+  </button>
+</div>
+
+<div *ngIf="this.confirmar == !'error' && this.confirmar == !'ok'" class="alert alert-danger alert-dismissible fade show" role="alert">
+  <strong>Error de sistema! </strong> Error en la conexion con la base de datos.
+  <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+    <span aria-hidden="true">&times;</span>
+  </button>
+</div>
+<form #formTecnico="ngForm" (ngSubmit) ="guardarTecnico(formTecnico)">
+    <!-- <input type="hidden" name="_id" #_id="ngModel" [(ngModel)]="clienteservicio.clienteSeleccionado._id"> -->
+
+
+  <div class="form-row">
+      <div class="form-group col-md-6">
+        <input  type="text" class="form-control" name="nombreTecnico" id="nombreTecnico" #nombreTecnico="ngModel"
+        [(ngModel)]="tecnicoServicio.TecnicoSeleccionado.nombre"
+        placeholder="Nombre" required pattern="[a-zA-Z# ]+">
+        <span class="form-text text-danger" *ngIf="nombreTecnico.touched && !nombreTecnico.valid">
+           el campo esta vacio o contiene caracteres no permitidos
+        </span>
+      </div>
+      <div class="form-group col-md-6">
+          <input  type="text" class="form-control" name="apellidoTecnico" id="apellidoTecnico" #apellidoTecnico="ngModel"
+          [(ngModel)]="tecnicoServicio.TecnicoSeleccionado.apellido"
+           placeholder="Apellido" required pattern="[a-zA-Z# ]+">
+           <span class="form-text text-danger" *ngIf="apellidoTecnico.touched && !apellidoTecnico.valid">
+              el campo esta vacio o contiene caracteres no permitidos
+           </span>
+      </div>
+    </div>
+
+    <div class="form-row">
+      <div class="form-group col-md-6">
+          <input  type="text" class="form-control" name="telefonoTecnico" id="telefonoTecnico" #telefonoTecnico="ngModel"
+          [(ngModel)]="tecnicoServicio.TecnicoSeleccionado.telefono"
+          placeholder="Telefono" required pattern="[0-9]+">
+          <span class="form-text text-danger" *ngIf="telefonoTecnico.touched && !telefonoTecnico.valid">
+             el campo esta vacio o contiene caracteres no permitidos
+          </span>
+      </div>
+  <div class="form-group col-md-6">
+      <input  type="text" class="form-control" name="correoTecnico" id="correoTecnico" #correoTecnico="ngModel"
+      [(ngModel)]="tecnicoServicio.TecnicoSeleccionado.correo"
+      placeholder="Correo Electronico" required pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,3}$">
+      <span class="form-text text-danger" *ngIf="correoTecnico.touched && !correoTecnico.valid">
+          el campo esta vacio o contiene caracteres no permitidos
+       </span>
+  </div>
+</div>
+
+    <div class="form-group">
+      <textarea class="form-control"  rows="3" name="descripcionTecnico" id="descripcionTecnico" #descripcionTecnico="ngModel"
+      [(ngModel)]="tecnicoServicio.TecnicoSeleccionado.descripcion"
+      placeholder="Que Repara?" required pattern="[a-zA-Z0-9# ]+"></textarea>
+      <span class="form-text text-danger" *ngIf="descripcionTecnico.touched && !descripcionTecnico.valid">
+          el campo esta vacio o contiene caracteres no permitidos
+       </span>
+  </div>
+
+    <div class="form-row">
+
+        <div class="form-group col-md-4">
+            <input  type="text" class="form-control" name="ciudadTecnico" id="ciudadTecnico" #ciudadTecnico="ngModel"
+            [(ngModel)]="tecnicoServicio.TecnicoSeleccionado.ciudad"
+            placeholder="Ciudad" required pattern="[a-zA-Z# ]+">
+            <span class="form-text text-danger" *ngIf="ciudadTecnico.touched && !ciudadTecnico.valid">
+               el campo esta vacio o contiene caracteres no permitidos
+            </span>
+        </div>
+        <div class="form-group col-md-4">
+            <input  type="text" class="form-control" name="direccionTecnico" id="direccionTecnico" #direccionTecnico="ngModel"
+            [(ngModel)]="tecnicoServicio.TecnicoSeleccionado.direccion"
+            placeholder="Direccion" required pattern="[a-zA-Z0-9# ]+">
+            <span class="form-text text-danger" *ngIf="direccionTecnico.touched && !direccionTecnico.valid">
+               el campo esta vacio o contiene caracteres no permitidos
+            </span>
+        </div>
+
+        <div class="form-group col-md-4">
+          <input  type="text" class="form-control" name="codigoPostalTecnico" id="codigoPostalTecnico" #codigoPostalTecnico="ngModel"
+          [(ngModel)]="tecnicoServicio.TecnicoSeleccionado.codigoPostal"
+          placeholder="Codigo Postal" required pattern="[0-9]+">
+          <span class="form-text text-danger" *ngIf="codigoPostalTecnico.touched && !codigoPostalTecnico.valid">
+             el campo esta vacio o contiene caracteres no permitidos
+          </span>
+      </div>
+      </div>
+
+
+  <button type="submit" [disabled]="!formTecnico.form.valid" class="btn btn-primary">Guardar</button>
+
+</form>
+
+

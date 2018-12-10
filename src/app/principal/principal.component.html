@@ -1,0 +1,105 @@
+
+
+   <div class="container">
+      <div class="row no-gutters">
+        <div class="col-12 margen">
+            <abe-grafica></abe-grafica>
+        </div>
+       <div class=" row no-gutters margen">
+          <div class="col-12">
+              <div class="accordion" id="accordionExample">
+                  <div class="card">
+                    <div class="card-header bg-primary" id="headingOne">
+                      <h5 class="mb-0">
+                        <button (click)="obtenerTecnicos()" class="btn btn-link bg-primary text-white" type="button" data-toggle="collapse" data-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
+                          Nuevo Cliente
+                        </button>
+                      </h5>
+                    </div>
+
+                    <div id="collapseOne" class="collapse show" aria-labelledby="headingOne" data-parent="#accordionExample">
+                      <div class="card-body">
+                        <abe-nuevocliente></abe-nuevocliente>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="card">
+                    <div class="card-header bg-success" id="headingTwo">
+                      <h5 class="mb-0">
+                        <button (click)="obtenerClientes()" class="btn btn-link collapsed bg-success text-white" type="button" data-toggle="collapse" data-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
+                         Lista de Clientes
+                        </button>
+                      </h5>
+                    </div>
+                    <div id="collapseTwo" class="collapse" aria-labelledby="headingTwo" data-parent="#accordionExample">
+                      <div class="card-body">
+                        <abe-listaclientes></abe-listaclientes>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="card">
+                    <div class="card-header bg-warning" id="headingThree">
+                      <h5 class="mb-0">
+                        <button (click)="obtenerPendientes()" class="btn btn-link collapsed bg-warning text-dark" type="button" data-toggle="collapse" data-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
+                          Clientes Pendientes
+                        </button>
+                      </h5>
+                    </div>
+                    <div id="collapseThree" class="collapse" aria-labelledby="headingThree" data-parent="#accordionExample">
+                      <div class="card-body">
+                          <abe-clientespendientes></abe-clientespendientes>
+                      </div>
+                    </div>
+                  </div>
+
+                  <div class="card">
+                    <div class="card-header bg-danger" id="headingFour">
+                      <h5 class="mb-0">
+                        <button (click)="obtenerGarantias()" class="btn btn-link collapsed bg-danger text-white" type="button" data-toggle="collapse" data-target="#collapseFour" aria-expanded="false" aria-controls="collapseFour">
+                         Garantias
+                        </button>
+                      </h5>
+                    </div>
+                    <div id="collapseFour" class="collapse" aria-labelledby="headingFour" data-parent="#accordionExample">
+                      <div class="card-body">
+                          <abe-garantias></abe-garantias>
+                      </div>
+                    </div>
+                  </div>
+
+                  <!-- <div class="card">
+                    <div class="card-header bg-primary" id="headingSix">
+                      <h5 class="mb-0">
+                        <button class="btn btn-link collapsed bg-primary text-white" type="button" data-toggle="collapse" data-target="#collapseSix" aria-expanded="false" aria-controls="collapseSix">
+                         Nuevo Tecnico
+                        </button>
+                      </h5>
+                    </div>
+                    <div id="collapseSix" class="collapse" aria-labelledby="headingSix" data-parent="#accordionExample">
+                      <div class="card-body">
+                          <abe-nuevotecnico></abe-nuevotecnico>
+                      </div>
+                    </div>
+                  </div> -->
+
+                  <div class="card">
+                    <div class="card-header bg-secondary" id="headingFive">
+                      <h5 class="mb-0">
+                        <button (click)="obtenerTecnicos()" class="btn btn-link collapsed bg-secondary text-white" type="button" data-toggle="collapse" data-target="#collapseFive" aria-expanded="false" aria-controls="collapseFive">
+                         Lista de Tecnicos
+                        </button>
+                      </h5>
+                    </div>
+                    <div id="collapseFive" class="collapse" aria-labelledby="headingFive" data-parent="#accordionExample">
+                      <div class="card-body">
+                          <abe-listatecnicos></abe-listatecnicos>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+
+            </div>
+       </div>
+      </div>
+    </div>
+
