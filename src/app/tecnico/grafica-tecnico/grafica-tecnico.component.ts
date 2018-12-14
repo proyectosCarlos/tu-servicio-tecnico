@@ -37,7 +37,7 @@ export class GraficaTecnicoComponent implements OnInit {
   mesActual: number = this.fechaActual.getMonth()
   userTec: string
 
-  constructor(private graficaService: GraficaServiceService, private modalService: NgbModal) {
+  constructor(public graficaService: GraficaServiceService, public modalService: NgbModal) {
     var fecha = new Date();
     this.valorSeleccionado =  fecha.getFullYear();
     this.lineChartLabels=['Ene', 'Feb ', 'Mar ', 'Abr','May', 'Jun', 'Jul', 'Ago', 'Sep', 'Oct', 'Nov', 'Dic'];

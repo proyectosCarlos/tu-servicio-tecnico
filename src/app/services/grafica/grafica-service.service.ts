@@ -26,7 +26,7 @@ readonly URLAPI_CLIENTES_GRAFICATEC = 'http://localhost:3000/api/tuservicio/clie
 
 
 
-  constructor(private http: HttpClient) { }
+  constructor(  public http: HttpClient) { }
 
 
   obtenerClientes(year:number): Observable<Cliente[]>{

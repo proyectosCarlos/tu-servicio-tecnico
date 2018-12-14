@@ -16,7 +16,7 @@ export class PrincipalComponent implements OnInit {
 
   errorMsg
 
-  constructor(private tecnicoServicio: TecnicoService, private clienteServicio: ClienteService) {
+  constructor(public tecnicoServicio: TecnicoService, public clienteServicio: ClienteService) {
 
    }
 

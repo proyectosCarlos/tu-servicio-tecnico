@@ -31,7 +31,7 @@ export class ClienteService {
 
 
 
-  constructor(private http: HttpClient) {
+  constructor(  public http: HttpClient) {
     this.clienteSeleccionado = new Cliente()
    }
 

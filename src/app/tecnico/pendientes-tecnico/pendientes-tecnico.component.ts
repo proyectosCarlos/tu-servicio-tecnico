@@ -40,8 +40,8 @@ export class PendientesTecnicoComponent implements OnInit {
 
 
 
-  constructor(private clienteservicio: ClienteService, private tecnicoServicio: TecnicoService ,
-     private modalService: NgbModal, private _storage: AngularFireStorage , private imageService: ImagenesService ) {
+  constructor(public clienteservicio: ClienteService, public tecnicoServicio: TecnicoService ,
+     public modalService: NgbModal, public _storage: AngularFireStorage , public imageService: ImagenesService ) {
     this.userTec = localStorage.getItem('tstui')
   }
 

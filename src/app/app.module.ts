@@ -35,9 +35,9 @@ import { TokenInterceptorService } from './interceptor/token-interceptor.service
 import { GraficaTecnicoComponent } from './tecnico/grafica-tecnico/grafica-tecnico.component';
 import { ClientesTecnicoComponent } from './tecnico/clientes-tecnico/clientes-tecnico.component';
 import { PendientesTecnicoComponent } from './tecnico/pendientes-tecnico/pendientes-tecnico.component';
-import { ImagenesComponent } from './imagenes/imagenes.component'
 
-import { FileSelectDirective } from 'ng2-file-upload';
+
+
 
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { MatButtonModule, MatProgressBarModule } from '@angular/material';
@@ -73,8 +73,6 @@ import { GarantiasTecnicoComponent } from './tecnico/garantias-tecnico/garantias
     GraficaTecnicoComponent,
     ClientesTecnicoComponent,
     PendientesTecnicoComponent,
-    ImagenesComponent,
-    FileSelectDirective,
     GarantiasTecnicoComponent
 
   ],

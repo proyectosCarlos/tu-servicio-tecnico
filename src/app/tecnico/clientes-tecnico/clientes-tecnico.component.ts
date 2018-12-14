@@ -19,7 +19,7 @@ export class ClientesTecnicoComponent implements OnInit {
   estadoGarantia: Number
   userTec:string
 
-  constructor(private clienteservicio: ClienteService, private tecnicoServicio: TecnicoService, private modalService: NgbModal) {
+  constructor(public clienteservicio: ClienteService, public tecnicoServicio: TecnicoService, public modalService: NgbModal) {
     this.userTec = localStorage.getItem('tstui')
    }
 

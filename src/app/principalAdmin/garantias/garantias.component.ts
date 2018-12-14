@@ -18,7 +18,7 @@ export class GarantiasComponent implements OnInit {
   public searchText : string;
   dataSource:any
 
-  constructor(private clienteServicio:ClienteService, private tecnicoServicio: TecnicoService, private modalService: NgbModal ) { }
+  constructor( public clienteServicio:ClienteService,  public tecnicoServicio: TecnicoService, public modalService: NgbModal ) { }
 
   ngOnInit() {
     this.obtenerGarantias()

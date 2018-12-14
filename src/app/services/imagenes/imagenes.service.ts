@@ -17,7 +17,7 @@ export class ImagenesService {
   imagenSeleccionada: Imagen
   Imagenes: Imagen[]
 
-  constructor(private http: HttpClient) { }
+  constructor(  public http: HttpClient) { }
 
   editarCliente(cliente:Cliente){
     return this.http.put<any>(this.URL_API + `/${cliente._id}`, cliente)

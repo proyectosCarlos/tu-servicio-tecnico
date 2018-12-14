@@ -9,7 +9,7 @@ import { Mensaje } from 'src/app/models/mensaje';
 export class MensajeService {
 
 listaMensajes: AngularFireList<any>
-  constructor(private database: AngularFireDatabase) { }
+  constructor(public database: AngularFireDatabase) { }
 
   obtenerMensajes(tecnico){
  return this.listaMensajes = this.database.list(tecnico)

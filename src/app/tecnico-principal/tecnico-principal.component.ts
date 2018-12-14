@@ -12,7 +12,7 @@ import { Cliente } from '../models/cliente'
 export class TecnicoPrincipalComponent implements OnInit {
   userTec: string
   errorMsg: any
-  constructor(private tecnicoServicio: TecnicoService, private clienteservicio: ClienteService) {
+  constructor(public tecnicoServicio: TecnicoService, public clienteservicio: ClienteService) {
     this.userTec = localStorage.getItem('tstui')
 
   }

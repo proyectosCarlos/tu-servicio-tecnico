@@ -21,7 +21,7 @@ export class ListatecnicosComponent implements OnInit {
   TecnicoClassBtn: String
 
 
-  constructor(private tecnicoServicio: TecnicoService, private modalService: NgbModal) { }
+  constructor( public tecnicoServicio: TecnicoService, public  modalService: NgbModal) { }
 
   ngOnInit() {
     this.obtenerTecnicos()

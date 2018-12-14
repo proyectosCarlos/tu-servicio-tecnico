@@ -19,7 +19,7 @@ export class ClientespendientesComponent implements OnInit {
   dataSource:any
   userTec:string
 
-  constructor(private clienteservicio: ClienteService, private tecnicoServicio: TecnicoService , private modalService: NgbModal ) {
+  constructor(public clienteservicio: ClienteService, public tecnicoServicio: TecnicoService , public modalService: NgbModal ) {
 
    }
 

@@ -8,7 +8,7 @@ import { RegistroTecnicoComponent } from './tecnico/registro-tecnico/registro-te
 import { TecnicoPrincipalComponent } from './tecnico-principal/tecnico-principal.component'
 import { AuthguardGuard } from './guards/authguard.guard'
 import { TecAuthGuard} from './guards/tec-auth.guard'
-import { ImagenesComponent} from './imagenes/imagenes.component'
+
 
 
 
@@ -18,7 +18,6 @@ const appRoutes: Routes =[
   {path: 'principal', component: PrincipalComponent, canActivate:[AuthguardGuard]},
   {path: 'facturacion', component: FacturacionComponent},
   {path: 'avisos', component: AvisosComponent},
-  {path: 'imagenes', component: ImagenesComponent},
   {path: 'registro', component: RegistroTecnicoComponent},
   {path: 'tecnico', component: TecnicoPrincipalComponent, canActivate:[TecAuthGuard]},
   {path: '**', component: HomeComponent},

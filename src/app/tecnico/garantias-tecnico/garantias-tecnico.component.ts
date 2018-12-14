@@ -20,7 +20,7 @@ export class GarantiasTecnicoComponent implements OnInit {
   dataSource:any
   userTec:string
 
-  constructor(private clienteServicio:ClienteService, private tecnicoServicio: TecnicoService, private modalService: NgbModal,  private imageService: ImagenesService ) {
+  constructor(public clienteServicio:ClienteService, public tecnicoServicio: TecnicoService, public modalService: NgbModal,  public imageService: ImagenesService ) {
     this.userTec = localStorage.getItem('tstui')
    }
 

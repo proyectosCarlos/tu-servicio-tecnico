@@ -7,7 +7,7 @@ import { TecnicoService } from '../services/tecnico/tecnico.service'
 })
 export class TecAuthGuard implements CanActivate {
 
-  constructor( private service: TecnicoService, private ruta: Router ){}
+  constructor( public service: TecnicoService, public ruta: Router ){}
 
   canActivate(): boolean{
     if( localStorage.getItem('tstr')==='0'){

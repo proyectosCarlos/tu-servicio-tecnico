@@ -35,7 +35,7 @@ errorStatus: any
   readonly loginUrl ='http://localhost:3000/api/tuservicio/tecnico/login'
   readonly updateUrl = 'http://localhost:3000/api/tuservicio/tecnico/actualizar'
 
-  constructor(private http: HttpClient, private route: Router) {
+  constructor(public http: HttpClient, public route: Router) {
     this.TecnicoSeleccionado = new Tecnico()
     this.logging = false
    }

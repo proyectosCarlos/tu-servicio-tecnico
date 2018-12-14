@@ -38,7 +38,7 @@ export class GraficaComponent implements OnInit  {
   anioActual = this.fechaActual.getFullYear();
   mesActual: number = this.fechaActual.getMonth()
 
-  constructor(private graficaService: GraficaServiceService, private modalService: NgbModal){
+  constructor(public graficaService: GraficaServiceService, public modalService: NgbModal){
     var fecha = new Date();
     this.valorSeleccionado =  fecha.getFullYear();
     this.lineChartLabels=['Ene', 'Feb ', 'Mar ', 'Abr','May', 'Jun', 'Jul', 'Ago', 'Sep', 'Oct', 'Nov', 'Dic'];

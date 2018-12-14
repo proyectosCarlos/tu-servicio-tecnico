@@ -12,7 +12,7 @@ export class RegistroTecnicoComponent implements OnInit {
 
   confirmar: any
 
-  constructor(private tecnicoServicio: TecnicoService) { }
+  constructor(public tecnicoServicio: TecnicoService) { }
 
   ngOnInit() {
   }

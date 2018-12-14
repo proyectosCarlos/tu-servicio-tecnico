@@ -17,7 +17,7 @@ hasta: any
 
 errorFechas:boolean = false
 
-  constructor(private ImagenServicio: ImagenesService) {
+  constructor(public ImagenServicio: ImagenesService) {
 
    }
 

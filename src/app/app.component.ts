@@ -22,7 +22,7 @@ sesion: any[] = new Array()
 
 
 
-  constructor(private servicio: TecnicoService, private ruta: Router, private modalService: NgbModal){
+  constructor(public servicio: TecnicoService, public ruta: Router, public modalService: NgbModal){
 
   }
 

@@ -13,7 +13,7 @@ export class NuevotecnicoComponent implements OnInit {
 
   confirmar: any
 
-  constructor(private tecnicoServicio: TecnicoService) { }
+  constructor(public tecnicoServicio: TecnicoService) { }
 
   ngOnInit() {
   }

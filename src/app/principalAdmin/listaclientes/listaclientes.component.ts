@@ -21,7 +21,7 @@ export class ListaclientesComponent implements OnInit {
   dataSource:any
   estadoGarantia: Number
 
-  constructor(private clienteservicio: ClienteService, private tecnicoServicio: TecnicoService, private modalService: NgbModal ) { }
+  constructor(public clienteservicio: ClienteService, public tecnicoServicio: TecnicoService, public modalService: NgbModal ) { }
 
   ngOnInit() {
     this.obtenerClientes()

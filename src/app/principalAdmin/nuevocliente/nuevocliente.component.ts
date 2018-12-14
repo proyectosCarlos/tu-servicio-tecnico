@@ -22,7 +22,7 @@ errorMsg:any
 
 
 
-  constructor(private clienteservicio: ClienteService, private tecnicoServicio: TecnicoService) {
+  constructor(public clienteservicio: ClienteService, public tecnicoServicio: TecnicoService) {
 
    }
 

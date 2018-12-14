@@ -7,7 +7,7 @@ import { TecnicoService } from '../services/tecnico/tecnico.service'
 })
 export class TokenInterceptorService implements HttpInterceptor {
 
-  constructor(private injector: Injector) { }
+  constructor(public injector: Injector) { }
   intercept(req, next) {
 
     let servicioAuth =  this.injector.get(TecnicoService)
